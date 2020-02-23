@@ -89,16 +89,16 @@
  */ 
  
  //Solution for question 11 to 14 in code!
- //This is solution question 11!
+ //This is solution question 11:
  
  /*
     We want to print this!
      
     @@@@@@
-    @@           @  
-    @    @       @
-    @        @   @
-    @           @@ 
+    @@   @  
+    @ @  @
+    @  @ @
+    @   @@ 
     @@@@@@
      
     We need to print this for any value of n, in which n is the dimension of our square!
