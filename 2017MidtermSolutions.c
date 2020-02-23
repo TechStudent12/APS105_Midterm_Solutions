@@ -1,4 +1,4 @@
-/* Solution Author: Miguel Nonaka
+/* Solution Author: Sword Lord of the Lonely Peak
  * Date: 2020/02/22
  * Midterm 2017 - APS105
  * Solutions to questions 1 to 10:
