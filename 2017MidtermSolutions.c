@@ -162,7 +162,7 @@
  /* 
       We have to find the first occurence of ECE in an user-inputted string! 
       You have to understand the difference between strstr and strcmp
-      In short, strstr is used to compare two string to find the first occurence of the second in the first string.
+      In short, strstr is used to compare two string to find the first occurence of the second string in the first string.
             => strstr(s1,s2); // It will return NULL if it finds no occurence! 
       In the other hand, strcmp is used to compare two string to see if they are identical. 
       That means if the first character of both string is not same it would not continue to look at the second character.
