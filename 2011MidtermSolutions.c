@@ -40,7 +40,7 @@
 
   * 5) int lotto = (rand() % (649-601+1))+601; // int lotto = (rand() % (UPPER-LOWER+1)) + LOWER;
   * 6) 
-          Question states that given this program, what would be its output...
+            Question states that given this program, what would be its output...
            
             According to ASCII table (you should these values by heart as they are most used!):
             We know that capital A is equal to 65 and Z is 90...
@@ -170,7 +170,8 @@
   
   /*
        We have to write a program to find which of the two dates inputted by the user is earliest or the same as each other. 
-        I used arrays to code this. It can be done without them by replacing every instance of the two arrays with two different int variables. 
+       I used arrays to code this although you dont really need arrays to solve this problem. 
+       It can be done without them by replacing every instance of the two arrays with two different int variables. 
     
          #include <stdio.h>
          #include <stdlib.h>
@@ -208,11 +209,11 @@
    
    /* 
        We have to write a program that will ouput the largest positive number out of the user-inputted numbers!
-        A while loop would be needed for this program as there is requirements regarding the inputs of the user. 
-        Once, the user starts to enter numbers, we would need to store each of these numbers in an array.
-        A counter needs to be use to keep track of the array index and its size. 
-        Then, we will compare each number in the array to the initial largestNumber of the array which would be the number at index 0. 
-         For this, we would need a for loop that uses our counter. After comparing and getting the value needed, we will print the largest number. 
+       A while loop would be needed for this program as there is requirements regarding the inputs of the user. 
+       Once, the user starts to enter numbers, we would need to store each of these numbers in an array.
+       A counter needs to be use to keep track of the array index and its size. 
+       Then, we will compare each number in the array to the initial largestNumber of the array which would be the number at index 0. 
+       For this, we would need a for loop that uses our counter. After comparing and getting the value needed, we will print the largest number. 
     
         #include <stdio.h>
         
@@ -247,12 +248,12 @@
    
    /* 
        We have to write a function called pythagoreanTriples that accepts a positive integer and prints out one triple (x,y,z).
-        It needs to print this triple based on these requirements:
+       It needs to print this triple based on these requirements:
             (a) x2 + y2 = z2; 
             (b) y > 0 and y <= 100; 
             (c) y < z; 
             (d) x,y,z are all positive integers.
-        If there is no triple sastifies these requirements, we would need to print out "No solution exists.". 
+       If there is no triple sastifies these requirements, we would need to print out "No solution exists.". 
          
         #include <stdio.h>
         #include <stdlib.h>
@@ -293,11 +294,11 @@
    
    /* 
        We have to create a function called rotate that will rotate 3 user inputted numbers. 
-        Rotation must be done in this manner: 
+       Rotation must be done in this manner: 
             =>The first has original value of the third. 
             =>The second has the original value of the first. 
             =>The third has the original value of the second.
-        For this we would just need a simple swapping technique that involves saving the values in temporary variables. 
+       For this we would just need a simple swapping technique that involves saving the values in temporary variables. 
 
             #include <stdio.h>
             #include <stdlib.h>
@@ -332,9 +333,9 @@
    
    /*
         We have to write a function called areAmicable that will check if two numbers are amicable or not. 
-         To check this, we would need to add up all the divisors of number and then check if their sum equals to other number.
-         We would need a for loop for adding up the sum of their individual divisors. 
-         We also need this loop to see which number are divisors of the two given numbers (divisors cannot be the given number itself). 
+        To check this, we would need to add up all the divisors of number and then check if their sum equals to other number.
+        We would need a for loop for adding up the sum of their individual divisors. 
+        We also need this loop to see which number are divisors of the two given numbers (divisors cannot be the given number itself). 
     
            #include <stdio.h>
            #include <stdbool.h> 
