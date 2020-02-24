@@ -26,12 +26,12 @@
          b = 6;
          e = &c; // e = c
          f = &d; // f = d
-       *e = a + b; // e = c = 11
-       *f = *e + b; // f = d = 17
+         *e = a + b; // e = c = 11
+         *f = *e + b; // f = d = 17
          e = &a; // e is now equal to a 
          f = &b; // f is now equal to d
-       *e = c + d; // e = 11 + 17 = 28. Remember e points to the address of a, which is no longer 5, but 28. 
-       *f = a + b;  // f = 5 + 6 = 11. Remember a is now 28 and not 5, because of the previous statement. 
+         *e = c + d; // e = 11 + 17 = 28. Remember e points to the address of a, which is no longer 5, but 28. 
+         *f = a + b;  // f = 5 + 6 = 11. Remember a is now 28 and not 5, because of the previous statement. 
        
         Thus, the answer is a = 28  and b = 34
  
