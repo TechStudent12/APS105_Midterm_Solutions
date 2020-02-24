@@ -209,19 +209,52 @@
      scanf("%d", &index);
      for(i=0; i<=n; i++)
      {
-      for(j=0; j<=n; j++)
-      {
-        printf("%c", '0' + (index + j + i) % 10); 
-       }
+        for(j=0; j<=n; j++)
+        {
+         printf("%c", '0' + (index + j + i) % 10); 
+        }
       }
-     }
+    }
 
  */
 
  // This is the solution for question 14: 
 
  /* 
-   We 
+    We want to find all the occurences of the word NAN when the user inputs characters.
+    We would need a do while loop for this and also some knowledge of basic swapping techniques.
+    This mainly seen in the if statement in the code below. 
+    Moreover, we would need to user char to store previous user inputs and compare them with the word NAN.
+    The word NAN is seperated into characters. 
+    
+       #include <stdio.h>
+       #include <stdlib.h>
+       
+       int main(void)
+       {
+           char input; 
+           char endLoop = 'F';
+           char firstChar = 'N', secondChar = 'A', thirdChar = 'N';
+           char C1 = 0, C2 = 0, C3 = 0; 
+           do
+           {
+               printf("Input Next Character: ");
+               scanf(" %c", &input);
+               if(input != endLoop)
+               {
+                   C1 = C2; // N
+                   C2 = C3; // A
+                   C3 = input; // N
+               }
+               if(C1 == firstChar && C2 == secondChar && C3 == thirdChar)
+               {
+                   printf("Pattern NAN found!\n"); 
+               }
+           } while(input != endLoop);
+           printf("Done"); 
+       }
+
+ */
       
       
       
