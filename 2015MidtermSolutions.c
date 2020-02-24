@@ -211,7 +211,7 @@
      {
         for(j=0; j<=n; j++)
         {
-         printf("%c", '0' + (index + j + i) % 10); // remember '0' is 57 in ASCII so added to index of 3 with starting values of i and j being 0 gives us 3 as our starting point.
+          printf("%c", '0' + (index + j + i) % 10); // remember '0' is 48 in ASCII so added to index of 3 with starting values of i and j being 0 gives us 51 (48+3) or C as our starting point.
         }
       }
     }
@@ -231,7 +231,7 @@
        #include <stdlib.h>
        
        int main(void)
-       {
+        {
            char input; 
            char endLoop = 'F';
            char firstChar = 'N', secondChar = 'A', thirdChar = 'N';
