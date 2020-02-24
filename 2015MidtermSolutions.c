@@ -163,8 +163,34 @@
   // This is the solution for question 12: 
   
   /*
-
-
+    We want to create a program to calculate the arctan(x) without using the artan() function in the math.h library!
+    For this, we will need a function to calculate the arctan. We will also need a for loop to loop through 0 to 301.
+    
+    #include <stdio.h>
+    #include <stdlib.h>
+    #include <math.h>
+    
+    double artan(double x)
+    {
+      double sum = 0;
+      int i = 0, sign = 1; 
+      for(i = 1; i<=301; i+=2)
+      {
+         sum += (sign) * (pow(x,i)/i);  
+         if(sign == 1)// Sign will alternate from 1 to -1 (initial sign value is 1). 
+            sign = -1;
+         else
+            sign = 1; 
+      }
+      return sum; 
+    }
+    
+    int main(void)
+    {
+      printf("%.10lf", (4*artan(1/5.0) - artan(1/239.0))*4);
+    }
+ 
+  */
 
   
             
