@@ -145,7 +145,7 @@
 
     int main(void)
     {
-        double x = 0, result = 0;
+        double x = 0;
         printf("Enter a value: ");
         scanf("%lf", &x);
         int i = 0, temp = 1; 
@@ -153,7 +153,7 @@
         {   
             temp = temp * (-1)* (pow(x,i) / factorial(i));
         }
-        printf("result: %0.6lf", result);
+        printf("result: %0.6lf", temp);
     }
  */
  
