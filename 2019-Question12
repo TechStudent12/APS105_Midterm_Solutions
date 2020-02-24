@@ -33,10 +33,6 @@ int main(void)
    int pascalRow[]; 
    for(i = 1; i<=7; i++)
    {
-      //for(j=1; j<=(5-i); j++)
-      //{
-      //    printf(" "); 
-      //}
       int numerator = i - 1; 
       int denominator = 1; 
       int pascalCharacter = 1; 
