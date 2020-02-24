@@ -190,5 +190,38 @@
     {
       printf("%.10lf", (4*artan(1/5.0) - artan(1/239.0))*4);
     }
- 
-  */
+
+ */
+
+ // This is the solution for question 13: 
+
+ /*
+   We have to write a program that will print a pattern of numbers in a certain manner. 
+   We would need user to input value of index as well as a nested for loop for printing this pattern.
+   
+   #include <stdio.h> 
+   #include <stdlib.h>
+   
+   int main(void)
+   {
+     int index = 0, i = 0, n = 9, j = 0; 
+     printf("Enter index: ");
+     scanf("%d", &index);
+     for(i=0; i<=n; i++)
+     {
+      for(j=0; j<=n; j++)
+      {
+        printf("%c", '0' + (index + j + i) % 10); 
+       }
+      }
+     }
+
+ */
+
+ // This is the solution for question 14: 
+
+ /* 
+   We 
+      
+      
+      
