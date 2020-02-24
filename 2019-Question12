@@ -10,7 +10,7 @@ So the first 5 rows (numbering from zero) are:
     1   3   3   1
   1   4   6   4   1
 
-Looking at the last row, row #4, we have sums: 0 + 1,1 + 3,3 + 3,3 + 1,1 + 0 (getting the valuesfrom the row above) to give us 1,4,6,4,1. 
+Looking at the last row, row #4, we have sums: 0 + 1, 1 + 3, 3 + 3, 3 + 1, 1 + 0 (getting the valuesfrom the row above) to give us 1,4,6,4,1. 
 If we push this all left we get: 
 
 1
@@ -22,3 +22,44 @@ If we push this all left we get:
 Write a functioncalculatePascalRowSeven, with the prototype given below, that calculates row#7 (the eighth row) of Pascal’s triangle, iterating from row #0.  
 Do an in-place calculation, so that the result ends up in pascalRow[].  
 Do not use any other array. The given main() function prints the result.
+
+Solution: 
+
+#include <stdio.h>
+
+int main(void)
+{
+   int i = 0, ii = 0, jj = 0, j = 0, count = 0; 
+   int pascalRow[]; 
+   for(i = 1; i<=8; i++)
+   {
+      for(j=1; j<=(5-i); j++)
+      {
+          printf(" "); 
+      }
+      int numerator = i - 1; 
+      int denominator = 1; 
+      int pascalCharacter = 1; 
+      for(jj = 1; jj <= i; jj++)
+      {
+          if(i == 8)
+          {
+              pascalRow[count] = pascalCharacter; 
+              count++;
+          }
+          printf(" %d ", pascalCharacter); 
+          pascalCharacter = pascalCharacter * numerator; 
+          pascalCharacter = pascalCharacter / denominator;
+          denominator++;
+          numerator--; 
+      }
+      printf("\n");
+   }
+   printf("\n");
+   printf("Pascal's 7th row is: "); 
+   for(ii = 0; ii <= count; ii++)
+   {
+      printf(" %d ", pascalRow[ii]; 
+   }
+   return 0; 
+}
