@@ -1,4 +1,4 @@
-Question 12[12 Marks]
+Question 12 [12 Marks]
 
 In a Pascal’s Triangle, the first row, row #0, has a single element 1. 
 Each succeeding row elements are  the  sum  of  the  two  elements  just  above  (if  there  is  only  one  number  just  above,  then  that number is duplicated). 
