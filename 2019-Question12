@@ -1,0 +1,24 @@
+Question 12[12 Marks]
+
+In a Pascal’s Triangle, the first row, row #0, has a single element 1. 
+Each succeeding row elements are  the  sum  of  the  two  elements  just  above  (if  there  is  only  one  number  just  above,  then  that number is duplicated). 
+So the first 5 rows (numbering from zero) are: 
+
+          1
+        1   1
+      1   2   1
+    1   3   3   1
+  1   4   6   4   1
+
+Looking at the last row, row #4, we have sums: 0 + 1,1 + 3,3 + 3,3 + 1,1 + 0 (getting the valuesfrom the row above) to give us 1,4,6,4,1. 
+If we push this all left we get: 
+
+1
+1  1
+1  2  1
+1  3  3  1
+1  4  6  4  1
+
+Write a functioncalculatePascalRowSeven, with the prototype given below, that calculates row#7 (the eighth row) of Pascal’s triangle, iterating from row #0.  
+Do an in-place calculation, so that the result ends up in pascalRow[].  
+Do not use any other array. The given main() function prints the result.
