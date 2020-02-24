@@ -211,7 +211,7 @@
      {
         for(j=0; j<=n; j++)
         {
-         printf("%c", '0' + (index + j + i) % 10); 
+         printf("%c", '0' + (index + j + i) % 10); // remember '0' is 57 in ASCII so added to index of 3 with starting values of i and j being 0 gives us 3 as our starting point.
         }
       }
     }
@@ -238,20 +238,20 @@
            char C1 = 0, C2 = 0, C3 = 0; 
            do
            {
-               printf("Input Next Character: ");
-               scanf(" %c", &input);
-               if(input != endLoop)
-               {
-                   C1 = C2; // N
-                   C2 = C3; // A
-                   C3 = input; // N
-               }
-               if(C1 == firstChar && C2 == secondChar && C3 == thirdChar)
-               {
-                   printf("Pattern NAN found!\n"); 
-               }
+             printf("Input Next Character: ");
+             scanf(" %c", &input);
+             if(input != endLoop)
+             {
+                 C1 = C2; // N
+                 C2 = C3; // A
+                 C3 = input; // N
+             }
+             if(C1 == firstChar && C2 == secondChar && C3 == thirdChar)
+             {
+                 printf("Pattern NAN found!\n"); 
+             }
            } while(input != endLoop);
-           printf("Done"); 
+          printf("Done"); 
        }
 
  */
