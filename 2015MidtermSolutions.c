@@ -165,6 +165,7 @@
   /*
     We want to create a program to calculate the arctan(x) without using the artan() function in the math.h library!
     For this, we will need a function to calculate the arctan. We will also need a for loop to loop through 0 to 301.
+    These values are our loop starting and ending point. Moreover, these values increment by 2 each time. 
     
     #include <stdio.h>
     #include <stdlib.h>
@@ -191,8 +192,3 @@
     }
  
   */
-
-  
-            
- 
- 
