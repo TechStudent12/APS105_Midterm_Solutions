@@ -195,7 +195,7 @@
     => Print the total number of values entered; 
     => Print all the values in the order that the user entered them; 
     => Print whether the values are entered in ascending order, i.e., the next value is either greater than or equal to the previous one. 
-          For example, {3, 4, 7, 7} is a sequence of values in ascending order, but{3, 4, 7, 6}is not. 
+       For example, {3, 4, 7, 7} is a sequence of values in ascending order, but{3, 4, 7, 6}is not. 
      
     Thus, we would need to use bubble sort to sort through our array (in order to make it in ascending order). 
     We would also need to keep an original copy of our array before the sorting so that we could compare it with the sorted one. 
