@@ -1,0 +1,24 @@
+Question 3 [4 Marks]
+If i is declared as a variable of the int type, and p and q are both declared as variables to int-type
+pointers, which of the following assignment statements are illegal in the C programming language
+(compile-time warnings or errors), and which are legal (no warnings or errors at compile-time)?
+
+Solution: 
+
+  p = i  => illegal, b/c you assigning a integer value to the pointer without dereferencing. In other words, p is a pointer and i is not!
+ *p = i  => legal, because you are assigning the value stored in pointer p (through using the deferencing operator * to get to value stored in it) a new value, which corresponds to variable i.
+ *q = &i => illegal, you cannot store an address in the pointer, while it is being dereference (meaning accessing the value through the address that the pointer p is pointing to). 
+            P is an int (as it is being dereference) and i is an address, thus they are not compatible!
+  p = q  => legal, because equalizing two pointers of the same type will not yield any errors. 
+
+BONUS:
+
+  (a)    p	=	i; illegal, b/c	p	is	a	pointer	and	i	is	not.
+  (b)		*p	=	&i; illegal, b/c *p	is	an	int	and	&i	is	an	address.
+  (c)		&p	=	q; illegal, b/c	&p	is	a	constant.
+  (d)		 p	=	&q;	illegal, b/c p	is	a	pointer	to	int	and	&q	is	the	address	of	a	pointer.
+  (e)	   p	=	*&q; legal, b/c	*&q	is	an	alias	for	q,	so	this	is	equivalent	to	p	=	q;.
+  (f)		 p	=	q; legal, b/c both q and p are pointers of the same type. 
+  (g)	   p	=	*q;	 illegal, b/c	p	is	a	pointer	and	*q	is	an	int.
+  (h)	  *p	=	q; illegal, b/c	*p	is	an	int,	q	is	a	pointer.
+  (i)		*p	=	*q; legal, b/c *p	and	*q	are	both	ints.
