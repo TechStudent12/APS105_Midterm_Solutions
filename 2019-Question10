@@ -1,0 +1,45 @@
+Question 10[13 Marks]
+Complete the definition of a C function secondLargest whose prototype is shown below.
+The function  returns  the  index  of  the second  largest integer  in  the list array,  which  contains count elements.
+For  example,  if  the  list  passed  to  the  array  is {3, 9, 7, 5, 9, 8, 2, 4, 9},  the  function returns 5,  as list[5] contains  the  second  largest  integer 8.  
+If  there  are  multiple  occurrences of the second largest integer, the function returns the first occurrence.  
+For example, if the list is {3, 8, 3, 5, 9, 8, 2, 3, 8}, the function returns 1.  
+If there does not exist a second largest integer (i.e., all integers in the array are of the same value), the function returns -1. 
+For the sake of simplicity, you may assume that all integers in the array are positive, and there exists at least one element in the array (i.e.,count>0)
+
+Solution: 
+
+#include <stdio.h>
+
+int secondLargest(int arr[], int count)
+{
+  int i = 0, j = 0, temp = 0;
+  int max1 = 0, max2 = 0, maxIndex = 0, max2Index = 0, tempIndex = 0; 
+  int sizeArr = count; 
+  for(i = 0; i < sizeArr; i++)
+  {
+    if(arr[i] > max1)
+    {
+        temp = max1; 
+        max2 = max1; 
+        max1 = arr[i];
+        tempIndex = maxIndex; 
+        maxIndex = i; 
+        max2Index = tempIndex; 
+    }
+    else if(arr[i] < max1 && arr[i] > max2)
+    {
+        max2 = arr[i];
+        max2Index = i; 
+    }
+  }
+  return max2Index; 
+}
+
+int main()
+{
+    int arr[10] = {1,2,34,45,37}; 
+    int count = 10; 
+    int result = secondLargest(arr, count);
+    printf("%d", result); 
+}
