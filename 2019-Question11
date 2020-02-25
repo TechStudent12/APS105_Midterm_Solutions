@@ -1,0 +1,42 @@
+Question 11[13 Marks]
+Write a function,removeNegatives, that removes negative values from an integer array. 
+The function has two parameters:  the array and its size. 
+The function will modify the array by removingany negative values it has. 
+The function will also return the number of negatives that it has re-moved. 
+When a negative value in the array is encountered, the remaining integers should be moved for-ward  to  fill  in  the  gap  and  the  negative  value  should  be  changed  to  zero.   
+An example  mainfunction, and its output for three possible arrays, is provided below
+
+int main(void) 
+{
+  const int SIZE = 8;// Potential array inputs.
+  int allNegatives[] = {-3, -1, -5, -9, -10, -6, -7, -3};
+  int adjacentNegatives[] = {-3, -1, 5, -9, -10, 6, -7, -3};
+  int alternatingNegatives[] = {3, -1, 5, -9, 10, -6, 7, -3}; // Pick an input.
+  int *array = alternatingNegatives;
+  int numRemoved = removeNegatives(array, SIZE);
+  printf("%d negatives removed.\n", numRemoved);
+  for(int i = 0; i < SIZE; i++) {
+    printf("array[%d]: %d\n", i, array[i]);
+  }
+}
+
+Solution: 
+
+int removeNegatives(int array, int size)
+{
+  int i = 0, temp = 0, j = 0; 
+  int count = 0; 
+  for(i = 0; i < size; i++)
+  {
+    count++; 
+    if(array[i] < 0)
+    {
+      for(j = 0; j < size-1; j++)
+        arr[j] = arr[j+1]; 
+      i--; 
+      arr[size-1] = 0; 
+      size--; 
+    }
+  }
+  return count; 
+}
