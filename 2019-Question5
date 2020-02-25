@@ -1,0 +1,23 @@
+Question 5 [4 Marks]
+Write the output of the following program.
+
+#include <stdio.h>
+
+int main(void) {
+  int *p, x;
+  int fiveInt[5] = {1, 2, 3, 4, 5};
+  int *q; 
+  p = NULL; //p = 0
+  q = fiveInt; //q = 1
+  x = 6;
+  p = &x; //p = 6
+  printf("A: %d %d\n", x, *p); //6 6  
+  *(q+3) = *p; // *(q+3) = 6
+  *p = *q + *(q+3); // *p = 1 + 6 = 7 
+  printf("B: %d %d %d\n", x, *p, *q); // 7 7 1
+  return 0;
+}
+
+Output: 
+6 6
+7 7 1
