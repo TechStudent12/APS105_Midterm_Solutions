@@ -1,4 +1,4 @@
-Question 5[4 Marks]
+Question 5 [4 Marks]
 The variable numApples is an int type variable representing the number of apples in a barrel. 
 The owner of the apples is deciding whether to sell them in packages of 3 or 5 apples.  
 Write a single C statement that declares and initializes an int type variable called leftover.
