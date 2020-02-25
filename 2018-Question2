@@ -1,4 +1,4 @@
-Question 2[4 Marks]
+Question 2 [4 Marks]
 Write a single C statement — which contains exactly one terminating semi-colon (‘;’), and does not contain brace brackets (‘{’or‘}’) 
 — that declares a bool variable named isHighlighted, and sets its value to true if and only if the value stored in an integer variable named characterCount is an even positive number. 
 Assume that the variablecharacter Count has already been declared and initialized.
