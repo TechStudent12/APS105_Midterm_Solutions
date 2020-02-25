@@ -1,3 +1,4 @@
+Question 3 [4 Marks]
 In most companies, after you write some code, it gets reviewed by other programmers during aso-called “code review” before the code is ever used.  
 The purpose of a code review is to makesure the code is well written, concise, understandable and correct.
 Joe Wannabe Hacker, who works for FancyCo, submitted the following piece of C code for review:
