@@ -1,0 +1,9 @@
+Question 5[4 Marks]
+The variable numApples is an int type variable representing the number of apples in a barrel. 
+The owner of the apples is deciding whether to sell them in packages of 3 or 5 apples.  
+Write a single C statement that declares and initializes an int type variable called leftover.
+leftover should be initialized to the minimum of two quantities: 
+    1) the number of apples left over when the barrel ofapples is packaged into groups of 3; 
+    2) the number of apples left over when the barrel of apples ispackaged into groups of 5.
+ 
+ Solution: int leftover = fmin(numApples % 3, numApples % 5);  
