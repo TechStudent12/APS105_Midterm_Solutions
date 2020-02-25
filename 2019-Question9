@@ -17,3 +17,36 @@ Please enter the feet and inches to convert: 5 10
 5 feet 10 inches is 1 metres and 78 centimetres.
 
 Solution: 
+
+#include <stdio.h> 
+#include <math.h>
+
+const double metresFoot = 0.3048;
+const int centimetresMetres = 100; 
+const double inchesFoot = 12; 
+
+void getInput(int *outFeet, int *outInches)
+{
+  printf("Please enter the feet and inches to convert: ");
+  scanf("%d %d", outFeet, outInches); 
+}
+
+void convert(int feet, int inches, int *outMetres, int *outCentimetres)
+{
+    double metres = (feet + (inches / inchesFoot)) * metresFoot;
+    *outMetres = metres; 
+    *outCentimetres = round((metres - *outMetres) * centimetresMetres); 
+}
+
+void printOutput(int feet, int inches, int metres, int centimetres)
+{
+  printf("%d feet %d inches is %d metres and %d centimetres.", feet, inches, metres, centimetres);
+}
+
+int main(void)
+{
+  int feet, inches, centimetres, metres;
+  getInput(&feet, &inches);
+  convert(feet, inches, &metres, &centimetres);
+  printOutput(feet, inches, metres, centimetres);
+}
