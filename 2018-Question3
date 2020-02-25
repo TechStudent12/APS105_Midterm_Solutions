@@ -1,0 +1,16 @@
+In most companies, after you write some code, it gets reviewed by other programmers during aso-called “code review” before the code is ever used.  
+The purpose of a code review is to makesure the code is well written, concise, understandable and correct.
+Joe Wannabe Hacker, who works for FancyCo, submitted the following piece of C code for review:
+
+int i = 0;
+do {
+  printf("Count: %d\n", i + 1);
+  i++;} while (i < 2);
+
+This code was subsequently criticized when code-reviewed. 
+Other programmers on the codereview team insisted that the same code could be written in just a single C statement with the C programming language.
+Your task is to show that the code review team was right.
+In the space below, please provide asingle C statement that has the same outcome as the code submitted by Joe Wannabe Hacker.  
+A single C statement contains exactly one terminating semi-colon (‘;’), and does not contain bracebrackets (‘{’or‘}’)
+
+Solution: printf("Count: 1\n Count: 2\n"); 
