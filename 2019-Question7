@@ -1,0 +1,19 @@
+Question 7 [10 Marks]
+Write a function called median to find the median among three integers, which is the number at
+the middle. Your function should take 3 int-type parameters and return the value of the number
+at the middle. For example, with integers 2, 7, and 5 as input, the function returns 5; with integers
+6, 4, and 6 as input, the function returns 6.
+
+Solution: 
+
+#include <stdio.h>
+
+int median(int a, int b, int c)
+{
+  if(a>=b && a<=c || a<=b && a>=c)
+    return a; 
+  if(b>=a && b<=c || b<=a && b>=c)
+    return b;
+  if(c>=a && c<=b || c<=a && c>=b)
+    return c; 
+}
