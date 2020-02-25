@@ -1,0 +1,19 @@
+What is the output of the following program:
+
+#include <stdio.h>
+
+int *confuse(int *x, int *y) {
+  (*y)++; // b = 8
+  y = x; // y = x => y = &a. 
+  *y = 10; // y = &a = 10
+  return (y);}
+  
+int main(void) {
+  int a = 6, b = 7;
+  int *f = &b;
+  f = confuse(&a, &b); //a = 6, b = 7
+  (*f)++; // a = 11 as f now points to address of a. 
+  printf("a = %d and b = %d\n", a, b); // prints a = 11 and b = 8!
+  return 0;}
+  
+Solution: a = 11 and b = 8 
