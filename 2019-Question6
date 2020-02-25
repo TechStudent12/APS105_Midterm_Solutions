@@ -1,0 +1,46 @@
+Question 6 [8 Marks]
+Each of the following code segments may/will cause a runtime error. In the table, identify the
+potential runtime error and briefly explain how you would fix it.
+
+1. ERROR => Array out of bounds! cArray[] only contains 0-4 cells, but it does not contain a fifth one! 
+   Thus, this should be rewritten as printf("The last character is %c.\n", cArray[4]); 
+   
+    char cArray[] = {'H', 'E', 'L', 'L', 'O'};
+    printf("The last character is %c.\n", cArray[5]);
+    
+2. ERROR => Infinite loop, which will lead to memory overflow or dump. 
+   The i--; needs to be placed within the while loop and not outside of it!
+    int i = 5;
+    while (i >= 0) {
+      int j = i * i;
+      printf("j %d", j);
+    }
+    i--;
+3.  ERROR => The program did not take into account that the user can enter for b the value of 0. 
+    This is potential error that cause the program to malfunction. To fix this, add an if statement to check if(b==0).
+
+    int a, b, c;
+    printf("Enter two numbers.\n");
+    scanf("%d %d", &a, &b);
+    c = a % b;
+    if (c > 3)
+      printf("something\n");
+4. ERROR => pointer to integer assignment is not allowed without cast. 
+   To fix this you will need to this: 
+   
+    #include <stdio.h>
+    int higher(int *m, int *n) {
+      int isHigher;
+      if (m >=n) // if(*m>=*n)
+          isHigher = m; // isHigher = *m;
+      else
+          isHigher = n; // isHigher = *n; 
+      return &isHigher; // return isHigher; 
+    }
+    int main(void) {
+      int c = 9, d = 8;
+      int isHigher;
+      isHigher = higher(&c, &d);
+      printf("%d\n", isHigher);
+      return 0;
+    }
