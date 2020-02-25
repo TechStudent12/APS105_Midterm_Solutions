@@ -13,12 +13,12 @@ Solution:
 
 BONUS:
 
-  (a)    p	=	i; illegal, b/c	p	is	a	pointer	and	i	is	not.
-  (b)		*p	=	&i; illegal, b/c *p	is	an	int	and	&i	is	an	address.
-  (c)		&p	=	q; illegal, b/c	&p	is	a	constant.
-  (d)		 p	=	&q;	illegal, b/c p	is	a	pointer	to	int	and	&q	is	the	address	of	a	pointer.
-  (e)	   p	=	*&q; legal, b/c	*&q	is	an	alias	for	q,	so	this	is	equivalent	to	p	=	q;.
-  (f)		 p	=	q; legal, b/c both q and p are pointers of the same type. 
-  (g)	   p	=	*q;	 illegal, b/c	p	is	a	pointer	and	*q	is	an	int.
-  (h)	  *p	=	q; illegal, b/c	*p	is	an	int,	q	is	a	pointer.
-  (i)		*p	=	*q; legal, b/c *p	and	*q	are	both	ints.
+  p	=	i; illegal, b/c	p	is	a	pointer	and	i	is	not.
+ *p	=	&i; illegal, b/c *p	is	an	int	and	&i	is	an	address.
+ &p	=	q; illegal, b/c	&p	is	a	constant.
+  p	=	&q;	illegal, b/c p	is	a	pointer	to	int	and	&q	is	the	address	of	a	pointer.
+  p	=	*&q; legal, b/c	*&q	is	an	alias	for	q,	so	this	is	equivalent	to	p	=	q;.
+  p	=	q; legal, b/c both q and p are pointers of the same type. 
+  p	=	*q;	 illegal, b/c	p	is	a	pointer	and	*q	is	an	int.
+ *p	=	q; illegal, b/c	*p	is	an	int,	q	is	a	pointer.
+ *p	=	*q; legal, b/c *p	and	*q	are	both	ints.
