@@ -1,0 +1,29 @@
+Question 4 [4 Marks]
+If you try to compile the code below, it will generate errors/warnings. Identify the line (line
+numbers are shown on the left) where an error would occur, and write the code that would fix it.
+
+1 #include <stdio.h>
+2
+3 void requestAge(int *age) {
+4   do {
+5     printf("Please enter your age as a positive integer.\n");
+6     scanf("%d", &age);
+7   } while(*age <= 0);
+8 }
+9
+10 int main(void) {
+11   printf("How old are you?\n");
+12   int age;
+13   requestAge(age);
+14
+15   printf("Wow, you're %d years old!\n", *age);
+16   return 0
+17 }
+
+Solution: 
+
+Line 16 => ERROR, missing ; at the of return 0. Should be written as return 0; 
+Line 13 => ERROR, value of age that needs to be passed to the function has to be an address (as parameter of the function only contains a pointer). 
+           Should be written as requestAge(&age); 
+Line 15 => ERROR, trying to dereference a integer (makes no sense). Should be written as printf("Wow, you're %d years old\n", age); 
+Line 6  => ERROR, address of pointer in scanf (makes no sense). Should be written as scanf("%d", age); 
