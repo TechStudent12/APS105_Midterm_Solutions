@@ -1,0 +1,13 @@
+Question 1 [4 Marks]
+Write a single C statement — which contains exactly one terminating semi-colon (‘;’), and does
+not contain brace brackets (‘{’ or ‘}’) — that evaluates one answer x for the Quadratic equation.
+The formula is:
+
+                                  x = (−b +√(b^2 − 4ac))/(2a)
+
+Assume that all variables (i.e., x, a, b, and c) have already been declared as doubles. You can
+assume all of the C math library functions are available. Write your solution in the box below.
+
+Solution: 
+
+x = ((-1)*(b)+sqrt((b*b)-4*a*c))/(2*a); 
