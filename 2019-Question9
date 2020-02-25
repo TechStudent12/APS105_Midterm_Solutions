@@ -1,0 +1,20 @@
+Question 9 [12 Marks]
+There are 0.3048 metres in a foot, 100 centimetres in a metre, and 12 inches in a foot. Write a
+program that will accept, as input, a length in feet and inches. You do not have to check for valid
+input—assume the user enters positive, non-fractional values for the feet and inches. The program
+will output the equivalent length in metres and centimetres (rounded to the nearest centimetre).
+
+Your code should include four functions: one for input, one for output, one to perform the calculation, and main. 
+The function prototypes are below. For full marks, your code should not use any global variables.
+
+void getInput(int *outFeet, int *outInches);
+void printOutput(int feet, int inches, int metres, int centimetres);
+void convert(int feet, int inches, int *outMetres, int *outCentimetres);
+
+An example of one run of the program is below:
+
+Please enter the feet and inches to convert: 5 10
+5 feet 10 inches is 1 metres and 78 centimetres.
+
+Solution: 
+
