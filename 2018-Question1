@@ -1,4 +1,4 @@
-Question 1[4 Marks]
+Question 1 [4 Marks]
 Write a single C statement — which contains exactly one terminating semi-colon (‘;’), and does not contain brace brackets (‘{’or‘}’) — that declares a double variable result, and initializes it with the result of computing the following mathematical formula, based on variables x and y:
     
     √((3 sinx)/(1−4e^y))
