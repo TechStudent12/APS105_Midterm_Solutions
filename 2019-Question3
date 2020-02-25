@@ -7,18 +7,19 @@ Solution:
 
   p = i  => illegal, b/c you assigning a integer value to the pointer without dereferencing. In other words, p is a pointer and i is not!
  *p = i  => legal, because you are assigning the value stored in pointer p (through using the deferencing operator * to get to value stored in it) a new value, which corresponds to variable i.
+            In other words, *p is an integer and i is also an integer. 
  *q = &i => illegal, you cannot store an address in the pointer, while it is being dereference (meaning accessing the value through the address that the pointer p is pointing to). 
-            P is an int (as it is being dereference) and i is an address, thus they are not compatible!
+            q is an int (as it is being dereference) and i is an address, thus they are not compatible!
   p = q  => legal, because equalizing two pointers of the same type will not yield any errors. 
 
 BONUS:
 
-  p = i;   => illegal, b/c	p	is a pointer and i is not.
- *p = &i;  => illegal, b/c *p	is an	int	and	&i is an address.
- &p = q;   => illegal, b/c	&p	is a constant.
-  p = &q;  => illegal, b/c p	is a pointer	to	int	and	&q is the	address	of a pointer.
-  p = *&q; => legal, b/c	*&q	is an alias	for	q, so this is equivalent to p = q;.
-  p = q;   => legal, b/c both q and p are pointers of the same type. 
-  p = *q;  => illegal, b/c	p	is a pointer	and	*q is an int.
- *p = q;   => illegal, b/c	*p	is an	int, q is a	pointer.
- *p = *q;  => legal, b/c *p	and	*q are both ints.
+  p = i;   => illegal, b/c p is a pointer and i is an integer. 
+ *p = &i;  => illegal, b/c *p is a integer and &i is an address. 
+ &p = q;   => illegal, b/c &p is a constant. 
+  p = &q;  => illegal, b/c p is a pointer and &q is an address of a pointer. 
+  p = *&q; => legal, b/c *&q is an alias for q, which is the same thing p=q. 
+  p = q;   => legal, b/c both pointers are of the same type. 
+  p = *q;  => illegal, b/c p is a pointer and *q is an integer. 
+ *p = q;   => illegal, b/c *p is an integer and q is a pointer. 
+ *p = *q;  => legal, b/c both *p and *q are integers. 
