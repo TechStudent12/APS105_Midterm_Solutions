@@ -1,0 +1,30 @@
+Question 8[8 Marks]
+Identify and correct all compile-time errors you find in the C program below. 
+Compile-time errors are errors —not warnings— that the compiler will report when compiling the program.  
+Each line may or may not contain compile-time errors, and there may be more than one error per line.
+
+1        #include <stdio.h>
+2        int main(void) {
+3             double a, b = 3.14;
+4             do {
+5               int i = 0;
+6               printf("Enter a positive integer for offset: \n");
+7               scanf("%d", &a);
+8             } while (i < 5 && (a < 100 || a > 1);
+9             int j;
+10            for (j = 0, j < 3, j++) {
+11                   y = b * j % a;
+12                   printf("%d\n", y);
+13            }
+14            return 0;
+15        }
+
+Solution: 
+
+    Line 3 => WARNING. Unitiliazed value type b = 3.14. This should be written as double a; double b = 3.14; 
+    Line 7 => WARNING. It should be written as scanf("%lf", &a); 
+    Line 8 = > ERROR. Missing a parenthesis for while. This should be written as while(i < 5 && (a < 100 || a > 1)). 
+    Line 9 => ERROR. Uninitiliazed variable i! int i = 0; should be put outside the do-while loop. 
+    Line 10 => WARNING. Too many arguments in loop! This should be written as for(j = 0; j < 3; j++).
+    Line 11 => ERROR. % operator only operates with integer and not doubles. Should be written as y = b * j % (int)a; 
+    Line 11 => ERROR. Uninitialized variable y! To fix this, initialize the variable as follows: int y = b * j % (int)a; 
