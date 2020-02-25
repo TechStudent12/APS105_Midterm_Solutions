@@ -18,7 +18,7 @@ BONUS:
  *p = &i;  => illegal, b/c *p is a integer and &i is an address. 
  &p = q;   => illegal, b/c &p is a constant. 
   p = &q;  => illegal, b/c p is a pointer and &q is an address of a pointer. 
-  p = *&q; => legal, b/c *&q is an alias for q, which is the same thing p=q. 
+  p = *&q; => legal, b/c *&q is an alias for q, which is the same thing as p=q. 
   p = q;   => legal, b/c both pointers are of the same type. 
   p = *q;  => illegal, b/c p is a pointer and *q is an integer. 
  *p = q;   => illegal, b/c *p is an integer and q is a pointer. 
