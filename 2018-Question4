@@ -1,6 +1,6 @@
 Question 4 [4 marks]
 Complete the following C function, called mostSignificantDigit, that returns the most significantdigit of a positive int-type integer that is passed to the function.
-For example, if the function is called with the value987654321as its argument, it will return 9.
+For example, if the function is called with the value 987654321 as its argument, it will return 9.
 
 Solution: 
 
